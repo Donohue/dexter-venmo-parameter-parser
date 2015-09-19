@@ -5,24 +5,25 @@
     //Required. Inputs the module expects.
     "inputs": [
         //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From",
-            "type":"string"
+            "id": "message",
+            "title": "Message",
+            "description": "Message must have a format like \"@<Venmo Username> $<Amount>\". Those values are parsed and become outputs.",
+            "type": "string"
         }
-        */
     ],
-    //Required. Outputs the module emits.
     "outputs": [
       //e.g.
-      /*
         {
-            "id": "from",
-            "title":"From",
-            "type":"array"
+            "id": "username",
+            "title": "Venmo Username",
+            "type": "string"
+        },
+        {
+            "id": "amount",
+            "title": "Amount to Pay",
+            "type": "integer"
         }
-      */
     ],
     "title": "Donohue Venmo Parameter Parser" /* Required.A display name for the module */
 }
