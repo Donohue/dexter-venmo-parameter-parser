@@ -63,6 +63,7 @@ module.exports = _.merge({
              */
             input: {
                 message: "asdf asdf asdf asdf asdf @Brian-Donohue $20"
+                //message: "@Brian-Donohue $20"
             }
         }
     }

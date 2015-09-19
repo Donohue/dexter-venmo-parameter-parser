@@ -23,6 +23,11 @@
             "id": "amount",
             "title": "Amount to Pay",
             "type": "integer"
+        },
+        {
+            "id": "note",
+            "title": "Venmo Note",
+            "type": "string"
         }
     ],
     "title": "Donohue Venmo Parameter Parser" /* Required.A display name for the module */

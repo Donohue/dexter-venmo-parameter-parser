@@ -10,6 +10,7 @@ module.exports = {
         var parts = message.split(' ');
         var username = undefined;
         var amount = undefined;
+        var other_words = []
         var self = this;
         for (var i = 0; i < parts.length; i++) {
             if (parts[i][0] == '@' && parts[i].length > 1) {
@@ -17,6 +18,9 @@ module.exports = {
             }
             else if (parts[i][0] == '$' && parts[i].length > 1) {
                 amount = parseInt(parts[i].substr(1));
+            }
+            else {
+                other_words.push(parts[i]);
             }
         }
 
@@ -32,10 +36,18 @@ module.exports = {
                 input: step.inputs()
             });
         }
+        else if (other_words.length == 0) {
+            return self.fail({
+                message: 'You must include a message along with the Venmo username and amount',
+                input: step.inputs()
+            });
+        }
 
+        var note = other_words.join(' ');
         self.complete({
             'username': username,
-            'amount': amount
+            'amount': amount,
+            'note': note
         });
     }
 };
