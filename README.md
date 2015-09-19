@@ -1,5 +1,6 @@
-# Dexter Module
-> This folder contains the scaffolding for implementing a Dexter module. 
+# Venmo Parameter Parser Dexter Module
+> This Dexter module takes a string as input. The string is parsed for find the Venmo username,
+amount, and payment note, and then returns those parameters to Dexter as outputs.
 
 ## File Details
 ### index.js
